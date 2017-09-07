@@ -679,7 +679,7 @@ if 'TRAVIS' in os.environ:
             cache.init_app(self.app, config=config)
             rconn = self.app.extensions['cache'][cache] \
                         ._client.connection_pool.get_connection('foo')
-            assert rconn.db == 1
+            assert rconn.db == 2
 
 
     class CacheFilesystemTestCase(CacheTestCase):
